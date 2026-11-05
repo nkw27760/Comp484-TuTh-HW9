@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A small COMP 484 demo of JavaScript Date and Number objects." />
+    <title>JavaScript Mini Demo</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <p class="course-label">COMP 484 <span aria-hidden="true">/</span> Homework 9</p>
+        <h1>JavaScript Mini Demo</h1>
+        <p class="intro">A quick look at dates, number conversion, and everyday calculations in the browser.</p>
+        <nav aria-label="Page sections">
+          <a href="#date-display">Date display</a>
+          <a href="#number-tests">Number tests</a>
+          <a href="#math-results">Math results</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="content">
+      <!-- The first card displays a date created and formatted by JavaScript. -->
+      <section class="card date-card" id="date-display" aria-labelledby="date-heading">
+        <div class="section-heading">
+          <span class="section-number" aria-hidden="true">01</span>
+          <div>
+            <p class="section-kicker">Built-in object</p>
+            <h2 id="date-heading">Date Display</h2>
+          </div>
+        </div>
+        <p class="section-description">The page reads today's date and formats the month and day with two digits.</p>
+        <p class="date-result" id="dateOutput" aria-live="polite">The date will appear here.</p>
+      </section>
+
+      <!-- The second card lists four separate string-to-number checks. -->
+      <section class="card" id="number-tests" aria-labelledby="number-heading">
+        <div class="section-heading">
+          <span class="section-number" aria-hidden="true">02</span>
+          <div>
+            <p class="section-kicker">Convert and validate</p>
+            <h2 id="number-heading">Number Conversion Tests</h2>
+          </div>
+        </div>
+        <p class="section-description">Each example starts as text, then shows the result of <code>Number()</code> and two checks.</p>
+        <ul class="result-list">
+          <li id="wholeNumberResult">Checking a whole-number string…</li>
+          <li id="decimalNumberResult">Checking a decimal string…</li>
+          <li id="invalidNumberResult">Checking a nonnumeric string…</li>
+          <li id="anotherWholeNumberResult">Checking another whole-number string…</li>
+        </ul>
+        <div class="message-grid" aria-live="polite">
+          <p class="status-message" id="invalidMessage">The invalid-value check will appear here.</p>
+          <p class="status-message" id="integerMessage">The integer check will appear here.</p>
+        </div>
+      </section>
+
+      <!-- The third card shows arithmetic, formatted values, and a conditional message. -->
+      <section class="card math-card" id="math-results" aria-labelledby="math-heading">
+        <div class="section-heading">
+          <span class="section-number" aria-hidden="true">03</span>
+          <div>
+            <p class="section-kicker">Arithmetic and formatting</p>
+            <h2 id="math-heading">Math and Number Formatting</h2>
+          </div>
+        </div>
+        <p class="section-description">A small two-item order calculates a subtotal, tax, and final cost.</p>
+        <div class="math-results" aria-live="polite">
+          <p id="subtotalOutput">Subtotal will appear here.</p>
+          <p id="taxOutput">Tax will appear here.</p>
+          <p class="total-line" id="totalOutput">Total will appear here.</p>
+        </div>
+        <p class="math-message" id="budgetMessage">The total comparison will appear here.</p>
+      </section>
+
+      <footer>
+        <p>Made with the browser's built-in JavaScript objects.</p>
+      </footer>
+    </main>
+  </body>
+</html>

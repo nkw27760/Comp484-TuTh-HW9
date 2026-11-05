@@ -1,0 +1,267 @@
+/* Set a calm color palette and a consistent box model for the whole page. */
+:root {
+  color-scheme: light;
+  --ink: #17313b;
+  --muted: #5d727b;
+  --paper: #f2f7f6;
+  --card: #ffffff;
+  --teal: #176b68;
+  --teal-dark: #105451;
+  --teal-pale: #e6f4f1;
+  --line: #dce8e5;
+  --accent: #e8a84a;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+}
+
+/* Give the page a clear title area and keep its content centered. */
+.site-header {
+  padding: 54px 24px 70px;
+  color: #f7fffd;
+  background: linear-gradient(125deg, #123b45 0%, #176b68 72%, #32877a 100%);
+  border-bottom: 5px solid var(--accent);
+}
+
+.header-inner,
+.content {
+  width: min(100%, 920px);
+  margin-inline: auto;
+}
+
+.course-label,
+.section-kicker {
+  margin: 0 0 7px;
+  color: #bce2da;
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.course-label span {
+  padding-inline: 6px;
+  color: #f2bd6d;
+}
+
+h1 {
+  max-width: 700px;
+  margin: 0;
+  font-size: clamp(2.4rem, 7vw, 4.4rem);
+  letter-spacing: -0.055em;
+  line-height: 1.04;
+}
+
+.intro {
+  max-width: 590px;
+  margin: 18px 0 23px;
+  color: #d9eeea;
+  font-size: 1.08rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+nav a {
+  padding: 7px 13px;
+  color: #f7fffd;
+  border: 1px solid rgb(255 255 255 / 28%);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--teal-dark);
+  background: #fff;
+  outline: none;
+}
+
+/* Stack each assignment section in its own panel. */
+.content {
+  display: grid;
+  gap: 22px;
+  padding: 32px 24px 46px;
+}
+
+.card {
+  padding: 27px 30px 29px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgb(19 59 69 / 6%);
+}
+
+.date-card {
+  border-top: 4px solid var(--teal);
+}
+
+.math-card {
+  border-top: 4px solid var(--accent);
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.section-number {
+  display: grid;
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  color: var(--teal-dark);
+  background: var(--teal-pale);
+  border-radius: 14px;
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.math-card .section-number {
+  color: #754600;
+  background: #fff2dd;
+}
+
+.section-kicker {
+  margin-bottom: 1px;
+  color: var(--teal);
+  font-size: 0.68rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: clamp(1.35rem, 4vw, 1.75rem);
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+
+.section-description {
+  margin: 16px 0 19px;
+  color: var(--muted);
+}
+
+code {
+  padding: 2px 6px;
+  color: var(--teal-dark);
+  background: var(--teal-pale);
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.date-result {
+  display: inline-block;
+  margin: 0;
+  padding: 12px 17px;
+  color: var(--teal-dark);
+  background: var(--teal-pale);
+  border-radius: 10px;
+  font-size: 1.15rem;
+  font-weight: 750;
+}
+
+.result-list {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.result-list li {
+  overflow-wrap: anywhere;
+  padding: 11px 13px;
+  background: #f7faf9;
+  border: 1px solid #e8efed;
+  border-radius: 9px;
+  font-size: 0.94rem;
+}
+
+.message-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 11px;
+  margin-top: 14px;
+}
+
+.status-message,
+.math-message {
+  margin: 0;
+  padding: 12px 14px;
+  color: var(--teal-dark);
+  background: var(--teal-pale);
+  border-radius: 9px;
+  font-weight: 650;
+}
+
+.math-results {
+  padding: 5px 17px;
+  background: #f7faf9;
+  border-radius: 11px;
+}
+
+.math-results p {
+  margin: 10px 0;
+}
+
+.math-results .total-line {
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.math-message {
+  margin-top: 13px;
+  color: #754600;
+  background: #fff2dd;
+}
+
+footer {
+  color: var(--muted);
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Keep the cards readable on narrow screens. */
+@media (max-width: 620px) {
+  .site-header {
+    padding: 38px 20px 48px;
+  }
+
+  .content {
+    gap: 16px;
+    padding: 20px 14px 32px;
+  }
+
+  .card {
+    padding: 22px 19px;
+    border-radius: 14px;
+  }
+
+  .message-grid {
+    grid-template-columns: 1fr;
+  }
+}
